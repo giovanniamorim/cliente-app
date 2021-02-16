@@ -1,0 +1,21 @@
+<h2 class="mt-4">Serviços Prestados</h2>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active"> Novo </li>
+</ol>
+<div class="container">
+    <form #servicoForm="ngForm" (ngSubmit)="onSubmit()" >
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>Cliente:</label>
+                    <select class="form-control" >
+                        <option value="">Selecione um cliente</option>
+                        <option *ngFor="let cliente of clientes" [ngValue]="cliente.id" >
+                            {{ cliente.nome }}
+                        </option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
